@@ -1,0 +1,5 @@
+﻿LVL 1/2:
+avr-gcc a2.c -mmcu=atmega32u4 -Os -DF_CPU=8000000UL -std=gnu99 -I../cab202_teensy -L../cab202_teensy -Wl,-u,vfprintf -lprintf_flt -lcab202_teensy -lm -o a2.o && avr-objcopy -O ihex a2.o a2.hex
+
+LVL 3:
+avr-gcc a2.c usb_serial.c -mmcu=atmega32u4 -Os -DF_CPU=8000000UL -std=gnu99 -I../cab202_teensy -L../cab202_teensy -Wl,-u,vfprintf -lprintf_flt -lcab202_teensy -lm -o a2.o && avr-objcopy -O ihex a2.o a2.hex
